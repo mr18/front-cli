@@ -5,4 +5,7 @@ node_modules
 locale/compile
 test/output
 package-lock.json
-
+*.log
+*.lock
+*-lock.json
+**/.micro

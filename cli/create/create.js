@@ -13,7 +13,7 @@ const create = async (config) => {
     const spinner = ora("项目生成中...\n");
     spinner.start();
     if (fse.existsSync(config.dir)) {
-      spinner.fail(`项目目录: ${config.name} ，已存在，请修改项目名称后重试！\n`);
+      spinner.fail(`项目目录: ${chalk.yellow(config.name)} ，已存在，请修改项目名称后重试！\n`);
       spinner.stop();
       return;
     }
@@ -23,9 +23,9 @@ const create = async (config) => {
       await createPackage(config);
       clear(config.cacheDir, config.dir);
 
-      spinner.succeed(`项目 ${chalk.green(config.name)} 生成成功！\n`);
-      spinner.info(`请使用 ${chalk.green("yarn install")} or ${chalk.green("npm install")} 安装依赖\n`);
-      spinner.info(`更多详情请查看 ${chalk.green("READMME.MD")} \n`);
+      spinner.succeed(`项目 ${chalk.yellow(config.name)} 生成成功！\n`);
+      spinner.info(`请使用 ${chalk.yellow("yarn install")} or ${chalk.yellow("npm install")} 安装依赖\n`);
+      spinner.info(`更多详情请查看 ${chalk.yellow("READMME.MD")} \n`);
       spinner.stop();
     } catch (e) {
       console.error(e);
@@ -59,7 +59,7 @@ const createPackage = async (config) => {
 export const checkExist = (name) => {
   let dir = resolvePwdPath(name);
   if (fse.existsSync(dir)) {
-    myOra.fail(`项目目录: ${name} ，已存在，请修改项目名称后重试！`);
+    myOra.fail(`项目目录: ${chalk.yellow(name)} ，已存在，请修改项目名称后重试！`);
     return true;
   }
   return false;

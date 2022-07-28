@@ -1,6 +1,6 @@
 .idea
 .vscode
 node_modules
-demo/locale
-demo/dist
+.gitignore
 package-lock.json
+yarn-error.log
