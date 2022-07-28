@@ -1,2 +1,5 @@
-# front-cli
-front-cli 脚手架工具
+# micro-front
+
+`micro create <project-name>`
+
+`micro create <project-name> -r,--remote <remote>`
