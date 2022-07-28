@@ -1,14 +1,14 @@
 {
-  "name": "micro-front",
-  "version": "1.0.0",
-  "description": "",
+  "name": "front-cli",
+  "version": "0.1.1",
+  "description": "`micro create <project-name>`",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "postinstall": "npm link"
   },
   "bin": {
-    "micro": "./bin/index.js"
+    "micro": "bin/index.js"
   },
   "author": "",
   "license": "ISC",
@@ -22,5 +22,13 @@
     "ora": "^6.1.0",
     "simple-git": "^3.7.1"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mr18/front-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mr18/front-cli/issues"
+  },
+  "homepage": "https://github.com/mr18/front-cli#readme"
 }
