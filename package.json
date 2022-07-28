@@ -1,7 +1,7 @@
 {
-  "name": "front-cli",
+  "name": "@mr18/front-cli",
   "version": "0.1.1",
-  "description": "`micro create <project-name>`",
+  "description": "micro create <project-name>",
   "main": "index.js",
   "type": "module",
   "scripts": {
